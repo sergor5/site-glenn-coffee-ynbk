@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Visit Glenn Coffee at Atatürk Blv. No:172/b, Eskişehir. Enjoy 5-star rated premium coffee, artisanal pastries, and a cozy atmosphere in Odunpazarı.">
+  <meta name="keywords" content="Glenn Coffee, Eskişehir coffee shop, Odunpazarı cafes, best coffee Eskişehir, Büyükdere restaurant, specialty coffee Türkiye">
+  <title>Glenn Coffee | Top Rated Coffee Shop in Odunpazarı, Eskişehir</title>
+  <style>
+:root {
+    --primary: #3E2723; /* Deep Coffee Brown */
+    --secondary: #D4AF37; /* Metallic Gold */
+    --accent: #EFEBE9; /* Light Cream */
+    --text-dark: #1a1a1a;
+    --text-light: #666666;
+    --white: #ffffff;
+    --bg-light: #F9F9F9;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sub-heading {
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Layout Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: var(--transition);
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #bfa030;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--primary);
+    margin: 0 15px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--secondary);
+}
+
+.btn-nav {
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 50px;
+}
+
+.btn-nav:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content p {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Grid Layouts */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.col-img, .col-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 0px var(--accent);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Cards */
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: var(--transition);
+    border-bottom: 3px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-bottom: 3px solid var(--secondary);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary);
+    font-family: var(--font-heading);
+}
+
+/* Testimonial */
+.testimonial-banner {
+    background: linear-gradient(rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.9)), url('https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.quote-box i.fa-quote-left {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.quote-box p {
+    font-size: 1.5rem;
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-style: italic;
+}
+
+.stars {
+    color: var(--secondary);
+    margin: 15px 0;
+}
+
+/* Contact Info */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.info-item h5 {
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.socials a {
+    color: var(--white);
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.socials a:hover {
+    color: var(--secondary);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+}
+
+/* Animations */
+.animate-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 20px 0;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+}
+  </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit Glenn Coffee in Odunpazarı, Eskişehir. Rated 5 stars for our premium coffee blends, artisanal pastries, and cozy atmosphere.">
+    <title>Glenn Coffee | Premium Coffee Experience in Eskişehir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Glenn Coffee.</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#contact" class="nav-link btn-nav">Visit Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="animate-up">Taste the Perfection in<br>Every Sip</h1>
+            <p class="animate-up delay-1">Experience Eskişehir's highest-rated coffee destination. Where tradition meets modern brewing.</p>
+            <div class="hero-btns animate-up delay-2">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#contact" class="btn btn-secondary">Find Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-img reveal">
+                    <div class="img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cozy Coffee Shop Interior">
+                    </div>
+                </div>
+                <div class="col-text reveal">
+                    <h4 class="sub-heading">Our Story</h4>
+                    <h2>More Than Just Coffee</h2>
+                    <p>Located in the heart of the Büyükdere district in Odunpazarı, Glenn Coffee has quickly become a local favorite. With a perfect <strong>5-star rating</strong>, we pride ourselves on precision, quality, and hospitality.</p>
+                    <p>Whether you need a quiet corner to work or a vibrant space to catch up with friends, our doors are open. We source premium beans and roast them to perfection to bring you the best coffee experience in Türkiye.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5.0</span>
+                            <span class="stat-desc">Star Rating</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">35+</span>
+                            <span class="stat-desc">Happy Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu/Services Section -->
+    <section id="menu" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header reveal">
+                <h4 class="sub-heading">What We Serve</h4>
+                <h2>Curated for Coffee Lovers</h2>
+            </div>
+            <div class="grid-3">
+                <!-- Card 1 -->
+                <div class="card reveal">
+                    <div class="card-icon">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3>Specialty Coffee</h3>
+                    <p>From robust espressos to creamy lattes and precise pour-overs. We use only the finest beans.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="card reveal">
+                    <div class="card-icon">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <h3>Fresh Pastries</h3>
+                    <p>Pair your brew with our daily selection of croissants, cakes, and artisanal cookies.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="card reveal">
+                    <div class="card-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Teas & Cold Brews</h3>
+                    <p>Not a coffee fan? Try our refreshing cold brews, iced teas, and herbal infusions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Banner -->
+    <section class="testimonial-banner">
+        <div class="container">
+            <div class="quote-box reveal">
+                <i class="fas fa-quote-left"></i>
+                <p>"Absolutely the best coffee spot in Eskişehir. The atmosphere is amazing and the staff is incredibly friendly. A hidden gem in Odunpazarı."</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <span>- Local Guide Review</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="contact-info reveal">
+                    <h4 class="sub-heading">Visit Us</h4>
+                    <h2>Find Your Way to Glenn Coffee</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h5>Address</h5>
+                            <p>Büyükdere, Atatürk Blv. No:172/b,<br>26040 Odunpazarı/Eskişehir, Türkiye</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h5>Opening Hours</h5>
+                            <p>Mon - Sun: 09:00 - 23:00</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <h5>Quality</h5>
+                            <p>Rated 5/5 based on 35 Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map reveal">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.456789!2d30.5!3d39.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDQ1JzAwLjAiTiAzMMKwMzAnMDAuMCJF!5e0!3m2!1sen!2str!4v1600000000000!5m2!1sen!2str" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Glenn Coffee.</div>
+                <p>Brewing happiness in Odunpazarı, Eskişehir.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Glenn Coffee. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Scroll Animations (Intersection Observer)
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    revealElements.forEach(element => {
+        revealOnScroll.observe(element);
+    });
+
+    // Navbar Background Change on Scroll
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 4px 15px rgba(0,0,0,0.1)';
+            navbar.style.padding = '15px 0';
+        } else {
+            navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
+            navbar.style.padding = '20px 0';
+        }
+    });
+});
+  </script>
+</body>
+</html>
